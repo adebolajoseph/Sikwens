@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* .homepage {
+    text-align: center;
+  }
+   */
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    background-color: white;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .auth-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .sign-up, .login {
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .sign-up {
+    background-color: white;
+    border: 1px solid blue;
+    color: blue;
+  }
+  
+  .login {
+    background-color: blue;
+    color: white;
+    border: none;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    padding: 50px;
+  }
+  
+  .hero-section h1 {
+    font-size: 36px;
+  }
+  
+  .hero-section p {
+    font-size: 18px;
+    color: gray;
+  }
+  
+  .hero-buttons {
+    margin-top: 20px;
+  }
+  
+  .play-now, .visit-blog {
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .play-now {
+    background-color: blue;
+    color: white;
+    border: none;
+  }
+  
+  .visit-blog {
+    background-color: white;
+    border: 1px solid blue;
+    color: blue;
+  }
+  
+  /* Illustration */
+  .illustration img {
+    width: 500px;
+    margin-top: 20px;
+  }
+  
+  /* Logos */
+  .logos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+  }
+  

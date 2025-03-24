@@ -1,0 +1,107 @@
+.footer {
+    background-color: #f8f8f8;
+    padding: 40px 60px;
+    color: #333;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* Make sure each section takes equal space */
+.latest-updates, .useful-links, .contact-details {
+    flex: 1;
+}
+
+/* Blog and Video Section */
+.latest-updates {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.blog-post, .latest-video {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.blog-post img, .latest-video img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.content {
+    max-width: 250px;
+}
+
+.content h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #007bff;
+}
+
+.content p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Useful Links */
+.useful-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.useful-links li a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Contact Details */
+.contact-details {
+    text-align: left;
+}
+
+.contact-details p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.contact-details a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    font-size: 18px;
+    margin-top: 10px;
+    height: 54px;
+}
+
+.footer-logo {
+    .footer-logo {
+        width: 241px; /* Increase size for better visibility */
+        display: block; /* Ensures proper positioning */
+        margin: 15px auto ; 
+    }
+    
+}
+
+/* Copyright */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #666;
+}

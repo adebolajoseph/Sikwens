@@ -33,15 +33,16 @@ h1 {
 /* Buttons Container */
 .buttons {
   display: flex;
-  justify-content: space-between; /* See more on left, toggle group centered */
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   max-width: 800px;
   margin: 0 auto 30px auto;
-  position: relative;
+  gap: 15px;
 }
 
 /* See More Button */
-.btn1 {
+.btn {
   background: #fff;
   border: 2px solid #007bff;
   color: #007bff;
@@ -50,10 +51,11 @@ h1 {
   cursor: pointer;
   font-size: 14px;
   transition: all 0.3s;
+  text-decoration: none;
 }
 
 /* See More Button Hover */
-.btn1:hover {
+.btn:hover {
   background: #0056b3;
   color: white;
 }
@@ -61,14 +63,11 @@ h1 {
 /* Toggle Button Group - Centered */
 .toggle-buttons {
   display: flex;
-  background: #d4f5ff; /* Light blue background */
-  border-radius: 30px; /* More rounded */
+  background: #d4f5ff;
+  border-radius: 30px;
   overflow: hidden;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 3px; /* Reducing padding to fit buttons properly */
-  width: fit-content; /* Ensures it wraps around buttons */
+  padding: 3px;
+  width: fit-content;
 }
 
 /* Individual Toggle Buttons */
@@ -76,33 +75,33 @@ h1 {
   border: none;
   padding: 10px 20px;
   background: transparent;
-  color: black; /* Default text color */
+  color: black;
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
-  border-radius: 30px; /* Ensures smooth pill shape */
+  border-radius: 30px;
 }
 
 /* Active Toggle Button */
 .toggle-buttons .btn.active {
-  background: #00b4e6; /* Vibrant blue background */
+  background: #00b4e6;
   color: white;
-  border-radius: 30px;
 }
 
 /* Hover Effect for Toggle Buttons */
 .toggle-buttons .btn:hover {
-  background: #00a0cc; /* Slightly darker blue */
+  background: #00a0cc;
   color: white;
 }
-
 
 /* Blog Categories Section */
 .blog-categories {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
 }
 
 /* Individual Blog Category Cards */
@@ -112,7 +111,8 @@ h1 {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
-  width: 250px;
+  width: 280px;
+  max-width: 100%;
 }
 
 /* Blog Category Images */
@@ -141,4 +141,56 @@ h1 {
   color: #007bff;
   text-decoration: none;
   font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .header {
+    padding: 20px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .toggle-buttons {
+    position: static;
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-categories {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .everything-container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .toggle-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .toggle-buttons .btn {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
 }

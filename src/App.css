@@ -22,6 +22,29 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 20px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .App-header {
+    font-size: calc(8px + 2vmin); /* Reduce font size for smaller screens */
+    padding: 10px;
+  }
+
+  .App-logo {
+    height: 30vmin; /* Reduce logo size */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .App-header {
+    font-size: calc(6px + 2vmin);
+  }
+
+  .App-logo {
+    height: 25vmin;
+  }
 }
 
 .App-link {

@@ -1,108 +1,98 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* .homepage {
-    text-align: center;
-  }
-   */
-  /* Navbar */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 50px;
-    background-color: white;
-  }
-  
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-links li a {
-    text-decoration: none;
-    color: black;
-  }
-  
-  .auth-buttons {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .sign-up, .login {
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .sign-up {
-    background-color: white;
-    border: 1px solid blue;
-    color: blue;
-  }
-  
-  .login {
-    background-color: blue;
-    color: white;
-    border: none;
-  }
-  
-  /* Hero Section */
+/* Hero Section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 50px;
+  text-align: left;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-section h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero-section h1 span {
+  color: blue;
+}
+
+.hero-section p {
+  font-size: 18px;
+  color: gray;
+  max-width: 500px;
+  line-height: 1.5;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.play-now, .visit-blog {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.play-now {
+  background-color: blue;
+  color: white;
+  border: none;
+}
+
+.visit-blog {
+  background-color: white;
+  border: 1px solid blue;
+  color: blue;
+}
+
+/* Illustration */
+.illustration img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
   .hero-section {
-    padding: 50px;
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 20px 50px;
   }
-  
+
+  .hero-text {
+    max-width: 100%;
+  }
+
   .hero-section h1 {
-    font-size: 36px;
+    font-size: 28px;
   }
-  
+
   .hero-section p {
-    font-size: 18px;
-    color: gray;
+    font-size: 16px;
+    max-width: 100%;
   }
-  
+
   .hero-buttons {
-    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
   }
-  
+
   .play-now, .visit-blog {
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 5px;
-    cursor: pointer;
+    width: 90%;
+    max-width: 250px;
   }
-  
-  .play-now {
-    background-color: blue;
-    color: white;
-    border: none;
-  }
-  
-  .visit-blog {
-    background-color: white;
-    border: 1px solid blue;
-    color: blue;
-  }
-  
-  /* Illustration */
+
   .illustration img {
-    width: 500px;
-    margin-top: 20px;
+    width: 80%;
+    max-width: 350px;
   }
-  
-  /* Logos */
-  .logos {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 40px;
-  }
-  
+}

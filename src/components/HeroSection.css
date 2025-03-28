@@ -2,39 +2,39 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 50px 10%;
+  padding: 100px 10%;
   background-color: #f9f9f9;
 }
 
-
+/* Text Content */
 .hero-content {
   max-width: 50%;
 }
 
 .hero-content h1 {
-  font-size: 54px;
+  font-size: 48px;
   color: #333;
   font-family: "Space Grotesk", sans-serif;
   font-weight: 600;
+  line-height: 1.2;
 }
 
-.hero-content h1 span {
+.hero-content h1 .highlight {
   color: black;
 }
 
 .hero-content p {
-  font-size: 1.1rem;
+  font-size: 18px;
   color: #555;
-  margin-top: 10px;
-  line-height: 1.5; 
+  margin-top: 15px;
+  line-height: 1.5;
 }
 
-
+/* Buttons */
 .hero-buttons {
-  margin-top: 20px;
+  margin-top: 25px;
   display: flex;
-  gap: 12px; 
-
+  gap: 12px;
 }
 
 .btn {
@@ -46,18 +46,16 @@
   transition: all 0.3s ease-in-out;
 }
 
-
 .btn-primary {
-  background-color: #14b3e4; 
+  background-color: #14b3e4;
   color: white;
   border: none;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); 
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
 .btn-primary:hover {
   background-color: #129ac6;
 }
-
 
 .btn-secondary {
   background-color: white;
@@ -71,21 +69,48 @@
   background-color: #f8f8f8;
 }
 
-
+/* Hero Image */
 .hero-image img {
   width: 100%;
-  max-width: 500px;
+  max-width: 480px;
+  height: auto;
+}
+
+/* ================= */
+/* 📱 Responsive */
+/* ================= */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 80px 8%;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .hero-content p {
+    font-size: 17px;
+  }
 }
 
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
     text-align: center;
-    padding: 30px 5%;
+    padding: 60px 5%;
+    padding-top: 100px;
   }
 
   .hero-content {
     max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
   }
 
   .hero-buttons {
@@ -95,11 +120,16 @@
 
   .hero-buttons .btn {
     width: 100%;
-    max-width: 220px; 
+    max-width: 250px;
     text-align: center;
   }
 
   .hero-image {
     margin-top: 20px;
+  }
+
+  .hero-image img {
+    width: 80%;
+    max-width: 350px;
   }
 }

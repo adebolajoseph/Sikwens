@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "../components/Navbar"; // Import the main page Navbar
 import styles from "./SeeMorePage.module.css";
 import Details from "./Details";
 import logo from "../assets/SikwensGameLogoH1.png";
@@ -22,25 +23,10 @@ import whitehouse from "../assets/whitehouse.png";
 const SeeMore = () => {
   return (
     <div className={styles.seeMoreContainer}>
-      {/* Navbar */}
-      <header className={styles.header}>
-        <nav className={styles.nav}>
-          <div className={styles.logo}>
-            <img src={logo} alt="Logo" />
-          </div>
-          <ul className={styles.navLinks}>
-            <li><a href="#">Play</a></li>
-            <li><a href="#" className={styles.active}>Blog</a></li>
-            <li><a href="#">About Us</a></li>
-          </ul>
-          <div className={styles.authButtons}>
-            <button className={styles.signup}>Sign Up</button>
-            <button className={styles.login}>Login</button>
-          </div>
-        </nav>
-      </header>
+     
+      <Navbar /> 
+
       
-      {/* Hero Section */}
       <main className={styles.mainContent}>
         <section className={styles.hero}>
           <div className={styles.heroText}>
@@ -96,7 +82,7 @@ const SeeMore = () => {
             items: [
               { img: manwhite, text: "The Math of Polling: How Election Predictions Are Made" },
               { img: red, text: "Gerrymandering: How Math Shapes Political Districts" },
-              { img: whitehouse, text: "The Fibonacci Sequence: The Hidden Key to Creating Today’s Trends" } // Fixed syntax here
+              { img: whitehouse, text: "The Fibonacci Sequence: The Hidden Key to Creating Today’s Trends" }
             ] 
           },
         ].map((section, index) => (
@@ -115,7 +101,7 @@ const SeeMore = () => {
       </main>
 
       {/* Details Component */}
-      <Details/>
+      <Details />
     </div>
   );
 };

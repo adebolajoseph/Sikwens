@@ -1,19 +1,23 @@
+/* Footer Container */
 .footer {
     background-color: #f8f8f8;
     padding: 40px 60px;
     color: #333;
 }
 
+/* Footer Layout */
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 40px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
-/* Make sure each section takes equal space */
+/* Sections within Footer */
 .latest-updates, .useful-links, .contact-details {
     flex: 1;
+    min-width: 250px; /* Prevents excessive shrinking */
 }
 
 /* Blog and Video Section */
@@ -27,6 +31,7 @@
     display: flex;
     align-items: center;
     gap: 15px;
+    flex-wrap: wrap; /* Ensures wrapping on small screens */
 }
 
 .blog-post img, .latest-video img {
@@ -86,22 +91,85 @@
     gap: 10px;
     font-size: 18px;
     margin-top: 10px;
-    height: 54px;
 }
 
+/* Footer Logo */
 .footer-logo {
-    .footer-logo {
-        width: 241px; /* Increase size for better visibility */
-        display: block; /* Ensures proper positioning */
-        margin: 15px auto ; 
-    }
-    
+    width: 200px; /* Adjusted for better visibility */
+    display: block;
+    margin: 15px auto;
 }
 
-/* Copyright */
+/* Copyright Section */
 .footer-bottom {
     text-align: center;
     margin-top: 20px;
     font-size: 12px;
     color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .footer {
+        padding: 30px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .blog-post, .latest-video {
+        justify-content: center;
+    }
+
+    .useful-links, .contact-details {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 20px;
+    }
+
+    .footer-content {
+        gap: 20px;
+    }
+
+    .blog-post img, .latest-video img {
+        width: 80px;
+        height: 60px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 15px;
+    }
+
+    .footer-logo {
+        width: 150px;
+    }
+
+    .content h4 {
+        font-size: 14px;
+    }
+
+    .content p {
+        font-size: 12px;
+    }
+
+    .contact-details p, .useful-links li a {
+        font-size: 12px;
+    }
+
+    .social-icons {
+        font-size: 16px;
+    }
 }

@@ -23,7 +23,7 @@ const About = () => (
         The Sikwens Blog delves into the trivia topics of each day, sharing interesting stories, 
         facts, and insights to enhance your knowledge.
       </p>
-      <button className="btn btn-primary">View More</button>
+      
     </div>
   </section>
 );

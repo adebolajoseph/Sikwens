@@ -1,42 +1,76 @@
 .footer {
-    background-color: #f9f9f9;
-    padding: 40px 10%;
-    text-align: center;
-    border-top: 2px solid #ddd;
+  background-color: #f9f9f9;
+  padding: 40px 10%;
+  text-align: center;
+  border-top: 2px solid #ddd;
+}
+
+/* Footer Logos */
+.footer-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  height: 50px;
+}
+
+/* Footer Links - Always Horizontal */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap; /* Prevent stacking */
+  gap: 40px;
+  margin-bottom: 15px;
+  overflow-x: auto; /* Prevents wrapping if space is tight */
+  white-space: nowrap; /* Ensure links stay in one row */
+  padding: 10px 0;
+}
+
+.footer-links a {
+  color: #26b5e8;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #1a8ebd;
+}
+
+/* Footer Text */
+.footer-text {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ======================= */
+/* Mobile Responsiveness (Forcing Horizontal) */
+/* ======================= */
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 5%;
   }
-  
+
   .footer-logos {
-    display: flex;
-    justify-content: center;
-    gap: 90px;
-    margin-bottom: 20px;
+    gap: 30px;
   }
-  
-  .footer-logo {
-    height: 50px; 
-  }
-  
+
   .footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 90px;
-    margin-bottom: 15px;
+    flex-wrap: nowrap; /* Prevents links from stacking */
+    overflow-x: auto; /* Enables horizontal scrolling if needed */
+    justify-content: flex-start; /* Align links to start */
+    gap: 20px;
+    padding-bottom: 10px;
   }
-  
-  .footer-links a {
-    color: #26b5e8;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    transition: color 0.3s;
+
+  .footer-logo {
+    height: 40px;
   }
-  
-  .footer-links a:hover {
-    color: #1a8ebd;
-  }
-  
-  .footer-text {
-    font-size: 14px;
-    color: #555;
-  }
-  
+}

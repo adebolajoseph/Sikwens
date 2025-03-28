@@ -8,12 +8,12 @@
   gap: 50px;
 }
 
-
+/* Keep the image on the left and limit its size */
 .about-image {
   flex: 1;
   display: flex;
-  justify-content: flex-start; 
-  max-width: 500px;
+  justify-content: flex-start;
+  max-width: 400px;
 }
 
 .about-image img {
@@ -24,9 +24,9 @@
 }
 
 .about-content {
-  flex: 1;
+  flex: 2;
   max-width: 600px;
-  text-align: left; 
+  text-align: left;
 }
 
 .about-content h2 {
@@ -63,4 +63,61 @@
 .btn:hover {
   background: #000;
   color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .about-image {
+    flex: none;
+    max-width: 300px;
+  }
+
+  .about-content {
+    flex: 1;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-image {
+    max-width: 250px;
+  }
+
+  .about-content h2 {
+    font-size: 24px;
+  }
+
+  .about-content p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-image {
+    max-width: 60%;
+    justify-content: center;
+  }
+
+  .about-content {
+    max-width: 90%;
+    text-align: center;
+  }
 }

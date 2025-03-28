@@ -1,54 +1,140 @@
+/* Reset default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Container */
 .navbar {
-    display: flex;
-    position: fixed;
-    width: 95%;
-    justify-content: space-between;
-    padding: 15px 40px;
-    background-color: #fff;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Logo */
+.logo img {
+  height: 40px;
+}
+
+/* Hamburger Menu (Hidden by Default) */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* Hide nav links for smaller screens */
+@media (max-width: 1024px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    background: white;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   }
-  
-  .logo img {
-    height: 50px;
-  }
-  
-  .nav-links {
-    list-style: none;
+
+  .nav-links.open {
     display: flex;
-    gap: 20px;
   }
-  
-  .nav-links li {
-    display: inline-block;
+}
+
+/* Navigation Link Styles */
+.nav-links li {
+  padding: 10px 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Auth Buttons (Always Visible) */
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+  margin-right: -120px;
+}
+
+.auth-buttons .sign-up,
+.auth-buttons .login {
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: right;
+}
+
+.auth-buttons .sign-up {
+  background-color: white;
+  color: black;
+  border: 1px solid #333;
+}
+
+.auth-buttons .login {
+  background-color: #00B4D7;
+  color: white;
+  border: none;
+}
+
+/* ========================= */
+/* Mobile & Tablet View */
+/* ========================= */
+@media (max-width: 1024px) {
+  .hamburger {
+    display: block;
+    position: relative;
+    right: 0;
+    top: 0;
   }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-    font-weight: 500;
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 150px;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    display: none;
+    padding: 15px 0;
+    transition: all 0.3s ease-in-out;
   }
-  
+
+  .nav-links.open {
+    display: flex;
+  }
+
   .auth-buttons {
     display: flex;
-    gap: 15px;
+    flex-direction: row;
+    position: relative;
+    right: 0;
+    top: 0;
   }
-  
-  .auth-buttons .sign-up {
-    background-color: white;
-    color: black;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .auth-buttons .login {
-    background-color: #00B4D7;
-    color: white;
-    border: 1px solid #007bff;
-    padding: 8px 16px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
+}
